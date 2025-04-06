@@ -11,22 +11,25 @@ use App\Models\User;
 
 class AuthController extends Controller
 {
-    public function login(Request $request)
-    {
+    public function login(Request $request) {
         $request->validate([
-            'email' => 'required|string',
-            'password' => 'required|string',
+            'email' => 'required|email',
+            'password' => 'required',
         ]);
 
-        $user = User::where('email', $request->email)->first();
-
-        if (!$user || !Hash::check($request->password, $user->password)) {
+        if (!Auth::attempt($request->only('email', 'password'))) {
             return response()->json([
-                'message' => 'Credenciales inválidas'
+                'message' => 'Credenciales incorrectas'
             ], 401);
         }
 
-        $token = $user->createToken('auth_token')->plainTextToken;
+        $user = Auth::user();
+
+        // 🔥 Elimina todos los tokens anteriores (solo una sesión activa)
+        $user->tokens()->delete();
+
+        // ✅ Crea un nuevo token
+        $token = $user->createToken('token')->plainTextToken;
 
         return response()->json([
             'access_token' => $token,
