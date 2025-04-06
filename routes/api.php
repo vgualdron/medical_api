@@ -4,7 +4,7 @@ use App\Http\Controllers\AuthController;
 
 
 Route::get('/health', function (Request $request) {
-    return 'Health...';
+    return 'Health ... active';
 });
 
 // Rutas públicas
