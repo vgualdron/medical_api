@@ -14,10 +14,9 @@ endpoints:
       subgroupDescription: ''
       title: ''
       description: ''
-      authenticated: true
+      authenticated: false
       custom: []
     headers:
-      Authorization: 'Bearer {YOUR_AUTH_KEY}'
       Content-Type: application/json
       Accept: application/json
     urlParameters: []
@@ -40,10 +39,7 @@ endpoints:
         description: null
         custom: []
     responseFields: []
-    auth:
-      - headers
-      - Authorization
-      - 'Bearer 3V5EgbkvZcDPa166h8fd4ae'
+    auth: []
     controller: null
     method: null
     route: null
@@ -59,10 +55,9 @@ endpoints:
       subgroupDescription: ''
       title: ''
       description: ''
-      authenticated: true
+      authenticated: false
       custom: []
     headers:
-      Authorization: 'Bearer {YOUR_AUTH_KEY}'
       Content-Type: application/json
       Accept: application/json
     urlParameters: []
@@ -96,10 +91,7 @@ endpoints:
     fileParameters: []
     responses: []
     responseFields: []
-    auth:
-      - headers
-      - Authorization
-      - 'Bearer 3V5EgbkvZcDPa166h8fd4ae'
+    auth: []
     controller: null
     method: null
     route: null
@@ -115,10 +107,9 @@ endpoints:
       subgroupDescription: ''
       title: ''
       description: ''
-      authenticated: true
+      authenticated: false
       custom: []
     headers:
-      Authorization: 'Bearer {YOUR_AUTH_KEY}'
       Content-Type: application/json
       Accept: application/json
     urlParameters: []
@@ -130,10 +121,7 @@ endpoints:
     fileParameters: []
     responses: []
     responseFields: []
-    auth:
-      - headers
-      - Authorization
-      - 'Bearer 3V5EgbkvZcDPa166h8fd4ae'
+    auth: []
     controller: null
     method: null
     route: null

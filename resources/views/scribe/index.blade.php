@@ -108,9 +108,7 @@
 You can switch the language used with the tabs at the top right (or from the nav menu at the top left on mobile).&lt;/aside&gt;</code></pre>
 
         <h1 id="authenticating-requests">Authenticating requests</h1>
-<p>To authenticate requests, include an <strong><code>Authorization</code></strong> header with the value <strong><code>"Bearer {YOUR_AUTH_KEY}"</code></strong>.</p>
-<p>All authenticated endpoints are marked with a <code>requires authentication</code> badge in the documentation below.</p>
-<p>You can retrieve your token by visiting your dashboard and clicking <b>Generate API token</b>.</p>
+<p>This API is not authenticated.</p>
 
         <h1 id="endpoints">Endpoints</h1>
 
@@ -119,7 +117,6 @@ You can switch the language used with the tabs at the top right (or from the nav
                                 <h2 id="endpoints-GETapi-health">GET api/health</h2>
 
 <p>
-<small class="badge badge-darkred">requires authentication</small>
 </p>
 
 
@@ -131,7 +128,6 @@ You can switch the language used with the tabs at the top right (or from the nav
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
     --get "http://localhost/api/health" \
-    --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
@@ -142,7 +138,6 @@ You can switch the language used with the tabs at the top right (or from the nav
 );
 
 const headers = {
-    "Authorization": "Bearer {YOUR_AUTH_KEY}",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
@@ -189,7 +184,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 </span>
 <form id="form-GETapi-health" data-method="GET"
       data-path="api/health"
-      data-authed="1"
+      data-authed="0"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
@@ -220,17 +215,6 @@ You can check the Dev Tools console for debugging information.</code></pre>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
                                 <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
-&nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="Authorization" class="auth-value"               data-endpoint="GETapi-health"
-               value="Bearer {YOUR_AUTH_KEY}"
-               data-component="header">
-    <br>
-<p>Example: <code>Bearer {YOUR_AUTH_KEY}</code></p>
-            </div>
-                                <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
 &nbsp;
  &nbsp;
@@ -257,7 +241,6 @@ You can check the Dev Tools console for debugging information.</code></pre>
                     <h2 id="endpoints-POSTapi-login">POST api/login</h2>
 
 <p>
-<small class="badge badge-darkred">requires authentication</small>
 </p>
 
 
@@ -269,7 +252,6 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
     "http://localhost/api/login" \
-    --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
@@ -285,7 +267,6 @@ You can check the Dev Tools console for debugging information.</code></pre>
 );
 
 const headers = {
-    "Authorization": "Bearer {YOUR_AUTH_KEY}",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
@@ -322,7 +303,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 </span>
 <form id="form-POSTapi-login" data-method="POST"
       data-path="api/login"
-      data-authed="1"
+      data-authed="0"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
@@ -352,17 +333,6 @@ You can check the Dev Tools console for debugging information.</code></pre>
             <b><code>api/login</code></b>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
-                                <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
-&nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="Authorization" class="auth-value"               data-endpoint="POSTapi-login"
-               value="Bearer {YOUR_AUTH_KEY}"
-               data-component="header">
-    <br>
-<p>Example: <code>Bearer {YOUR_AUTH_KEY}</code></p>
-            </div>
                                 <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
 &nbsp;
@@ -413,7 +383,6 @@ You can check the Dev Tools console for debugging information.</code></pre>
                     <h2 id="endpoints-POSTapi-logout">POST api/logout</h2>
 
 <p>
-<small class="badge badge-darkred">requires authentication</small>
 </p>
 
 
@@ -425,7 +394,6 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
     "http://localhost/api/logout" \
-    --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
@@ -436,7 +404,6 @@ You can check the Dev Tools console for debugging information.</code></pre>
 );
 
 const headers = {
-    "Authorization": "Bearer {YOUR_AUTH_KEY}",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
@@ -467,7 +434,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 </span>
 <form id="form-POSTapi-logout" data-method="POST"
       data-path="api/logout"
-      data-authed="1"
+      data-authed="0"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
@@ -497,17 +464,6 @@ You can check the Dev Tools console for debugging information.</code></pre>
             <b><code>api/logout</code></b>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
-                                <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
-&nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="Authorization" class="auth-value"               data-endpoint="POSTapi-logout"
-               value="Bearer {YOUR_AUTH_KEY}"
-               data-component="header">
-    <br>
-<p>Example: <code>Bearer {YOUR_AUTH_KEY}</code></p>
-            </div>
                                 <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
 &nbsp;
